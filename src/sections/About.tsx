@@ -28,7 +28,7 @@ const experience = [
 
 const About = () => {
     return (
-        <Box component="section" id="about" sx={{ py: 8, bgcolor: 'background.paper' }}>
+        <Box component="section" id="about" sx={{ py: { xs: 4, md:8 }, bgcolor: 'background.paper' }}>
             <Container maxWidth="lg">
                 <Typography variant="h2" component="h2" gutterBottom sx={{ mb: 4 }}>
                     About
@@ -46,11 +46,11 @@ const About = () => {
                         <Typography variant="h6" sx={{ mb: 2 }}>
                             Tech Stack
                         </Typography>
-                        <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                             {skills.map((skill) => (
                                 <Chip key={skill} label={skill} />
                             ))}
-                        </Stack>
+                        </Box>
                     </Grid>
 
                     <Grid size={{ xs: 12, md: 6 }}>

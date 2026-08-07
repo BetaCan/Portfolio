@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Contact = () => {
     return (
-        <Box component="section" id="contact" sx={{ py: 8 }}>
+        <Box component="section" id="contact" sx={{ py: { xs: 4, md: 8 } }}>
             <Container maxWidth="sm" sx={{ textAlign: 'center' }}>
                 <Typography variant="h2" component="h2" gutterBottom sx={{ mb: 2 }}>
                     Contact

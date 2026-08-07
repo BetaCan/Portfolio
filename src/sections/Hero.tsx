@@ -8,12 +8,12 @@ const Hero = () => {
     };
 
     return (
-        <Box component="section" id="home" sx={{ py: { xs: 8, md: 12 } }}>
+        <Box component="section" id="home" sx={{ py: { xs: 4, md: 8 } }}>
             <Container maxWidth="lg">
                 <Grid container spacing={4} sx ={{ alignItems: 'center' }}>
                     <Grid size={{ xs: 12, md: 7 }}>
                         <Typography variant="h2" component="h1" sx={{ fontWeight: 700, mb: 1 }}>
-                            Canute D'Souza
+                            Canute Kenneth D'Souza
                         </Typography>
 
                         <Typography variant="h5" color="primary" sx={{ mb: 3, fontWeight: 500 }}>

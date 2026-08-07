@@ -4,7 +4,7 @@ import { projects } from '../data/projects';
 
 const Projects = () => {
     return (
-        <Box component="section" id="projects" sx={{ py: 8 }}>
+        <Box component="section" id="projects" sx={{ py: { xs: 4, md: 8 }}}>
             <Container maxWidth="lg">
                 <Typography variant="h2" component="h2" gutterBottom sx={{ mb: 4 }}>
                     Projects
