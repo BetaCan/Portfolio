@@ -49,7 +49,7 @@ const Navbar = () => {
                             sx={{ fontWeight: 700, cursor: 'pointer' }}
                             onClick={() => scrollToSection('home')}
                         >
-                            Canute Dsouza
+                            Canute Kenneth D'Souza
                         </Typography>
 
                         <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>

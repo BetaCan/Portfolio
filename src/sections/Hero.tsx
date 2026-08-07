@@ -22,8 +22,7 @@ const Hero = () => {
 
                         <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 500 }}>
                             First Class Honours Computer Science graduate building full stack and mobile
-                            applications with React, Kotlin, and modern web tooling. I like turning
-                            real problems into clean, working software.
+                            applications with React, Kotlin, and modern web tooling.
                         </Typography>
 
                         <Stack direction="row" spacing={2}>

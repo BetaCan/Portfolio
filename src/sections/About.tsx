@@ -7,10 +7,10 @@ const skills = [
 
 const experience = [
     {
-        role: 'Junior Developer',
+        role: 'Junior Developer (Internship)',
         company: 'CSE Connect',
         period: '',
-        description: 'Worked as a junior developer contributing to real projects and codebases.',
+        description: 'Worked as a junior software developer contributing to projects and codebases.',
     },
     {
         role: 'Team Lead (Internship)',
