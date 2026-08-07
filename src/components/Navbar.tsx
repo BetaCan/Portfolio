@@ -13,7 +13,15 @@ import {
     ListItemText,
     Slide,
 } from '@mui/material';
+import type { PaletteMode } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
+interface NavbarProps {
+    mode: PaletteMode;
+    toggleMode: () => void;
+}
 
 const navLinks = [
     { label: 'Home', id: 'home' },
@@ -22,7 +30,7 @@ const navLinks = [
     { label: 'Contact', id: 'contact' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ mode, toggleMode }: NavbarProps) => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [visible, setVisible] = useState(false);
 
@@ -52,21 +60,25 @@ const Navbar = () => {
                             Canute Kenneth D'Souza
                         </Typography>
 
-                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
+                        <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 1 }}>
                             {navLinks.map((link) => (
                                 <Button key={link.id} onClick={() => scrollToSection(link.id)}>
                                     {link.label}
                                 </Button>
                             ))}
+                            <IconButton onClick={toggleMode} color="inherit" aria-label="Toggle dark mode">
+                                {mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                            </IconButton>
                         </Box>
 
-                        <IconButton
-                            sx={{ display: { xs: 'flex', sm: 'none' } }}
-                            onClick={() => setMobileOpen(true)}
-                            aria-label="Open menu"
-                        >
-                            <MenuIcon />
-                        </IconButton>
+                        <Box sx={{ display: { xs: 'flex', sm: 'none' }, alignItems: 'center' }}>
+                            <IconButton onClick={toggleMode} color="inherit" aria-label="Toggle dark mode">
+                                {mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                            </IconButton>
+                            <IconButton onClick={() => setMobileOpen(true)} aria-label="Open menu">
+                                <MenuIcon />
+                            </IconButton>
+                        </Box>
                     </Toolbar>
                 </AppBar>
             </Slide>
