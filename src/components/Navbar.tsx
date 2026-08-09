@@ -25,8 +25,8 @@ interface NavbarProps {
 
 const navLinks = [
     { label: 'Home', id: 'home' },
-    { label: 'Projects', id: 'projects' },
     { label: 'About', id: 'about' },
+    { label: 'Projects', id: 'projects' },
     { label: 'Contact', id: 'contact' },
 ];
 
