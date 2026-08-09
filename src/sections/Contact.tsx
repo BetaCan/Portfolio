@@ -19,7 +19,7 @@ const Contact = () => {
                     <Button
                         variant="contained"
                         startIcon={<EmailIcon />}
-                        href="mailto:canutekd@gmail.com"
+                        href="mailto:canutecontact@gmail.com"
                     >
                         Email
                     </Button>
