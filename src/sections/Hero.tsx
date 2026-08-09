@@ -33,7 +33,7 @@ const Hero = () => {
                                 variant="outlined"
                                 size="large"
                                 startIcon={<DownloadIcon />}
-                                href="/cv/Canute_Dsouza_CV.pdf"
+                                href={`${import.meta.env.BASE_URL}cv/Canute_Kenneth_DSouza_Resume.pdf`}
                                 download
                             >
                                 Download CV

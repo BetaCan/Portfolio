@@ -8,6 +8,7 @@ export interface Project {
     liveUrl?: string;
     featured?: boolean;
 }
+import shiftBoardImage from '../assets/images/ShiftBoard.png';
 
 export const projects: Project[] = [
     {
@@ -48,6 +49,7 @@ export const projects: Project[] = [
         techStack: ['JavaScript', 'HTML', 'CSS'],
         githubUrl: 'https://github.com/BetaCan/shiftboard',
         liveUrl: 'https://betacan.github.io/ShiftBoard/',
+        image: shiftBoardImage,
         featured: false,
     },
     {

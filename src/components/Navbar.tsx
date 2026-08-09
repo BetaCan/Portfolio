@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
     AppBar,
     Toolbar,
@@ -11,7 +11,7 @@ import {
     ListItem,
     ListItemButton,
     ListItemText,
-    Slide,
+
 } from '@mui/material';
 import type { PaletteMode } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -25,23 +25,13 @@ interface NavbarProps {
 
 const navLinks = [
     { label: 'Home', id: 'home' },
-    { label: 'Projects', id: 'projects' },
     { label: 'About', id: 'about' },
+    { label: 'Projects', id: 'projects' },
     { label: 'Contact', id: 'contact' },
 ];
 
 const Navbar = ({ mode, toggleMode }: NavbarProps) => {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [visible, setVisible] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setVisible(window.scrollY > 150);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     const scrollToSection = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
         setMobileOpen(false);
@@ -49,7 +39,6 @@ const Navbar = ({ mode, toggleMode }: NavbarProps) => {
 
     return (
         <>
-            <Slide appear={false} direction="down" in={visible}>
                 <AppBar position="fixed" color="default" elevation={2}>
                     <Toolbar sx={{ justifyContent: 'space-between' }}>
                         <Typography
@@ -81,7 +70,6 @@ const Navbar = ({ mode, toggleMode }: NavbarProps) => {
                         </Box>
                     </Toolbar>
                 </AppBar>
-            </Slide>
 
             <Drawer anchor="right" open={mobileOpen} onClose={() => setMobileOpen(false)}>
                 <List sx={{ width: 220 }}>

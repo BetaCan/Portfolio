@@ -5,15 +5,18 @@ import type { Project } from '../data/projects';
 
 interface ProjectCardProps {
     project: Project;
+    onClick: () => void;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
     return (
         <Card
+            onClick={onClick}
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 height: '100%',
+                cursor: 'pointer',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                 '&:hover': {
                     transform: 'translateY(-4px)',
@@ -46,7 +49,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 </Stack>
             </CardContent>
 
-            <CardActions sx={{ px: 2, pb: 2 }}>
+            <CardActions sx={{ px: 2, pb: 2 }} onClick={(e) => e.stopPropagation()}>
                 {project.githubUrl && (
                     <Button
                         size="small"
